@@ -1,54 +1,38 @@
-# Build artifacts
+### Build outputs / tooling
 build/
-bin/
 out/
+bin/
 .gradle/
-*.class
-*.jar
-*.war
-*.ear
 
-# IDE files
+### IDE / OS
 .idea/
 .vscode/
-*.iml
-*.ipr
-*.iws
 .classpath
 .project
 .settings/
-.apt_generated/
-
-# Version control
-.git/
-.gitignore
-.gitattributes
-
-# Documentation
-*.md
-HELP.md
-
-# Environment files (will be provided at runtime)
-.env
-.env.local
-.env.prod
-
-# Test files
-src/test/
-*.test
-test-results/
-
-# OS files
 .DS_Store
 Thumbs.db
 *.swp
 *.swo
 *~
 
-# CI/CD files (not needed in image)
-.github/
-ci-cd.yaml
+### VCS
+.git/
 
-# Logs
+### Tests / reports
+src/test/
+test-results/
 *.log
 logs/
+
+### Env files (never bake secrets into images)
+.env
+.env.*
+
+### Docs (optional for build context)
+*.md
+HELP.md
+
+### CI metadata (not needed inside image)
+.github/
+ci-cd.yaml
